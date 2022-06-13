@@ -280,7 +280,7 @@ class WestApp:
         # The prog='west' override avoids the absolute path of the
         # main.py script showing up when West is run via the wrapper
         parser = WestArgumentParser(
-            prog='west', description='The Zephyr RTOS meta-tool.',
+            prog='west', description='The Super-meta-tool.',
             epilog='''Run "west help <command>" for help on each <command>.''',
             add_help=False, west_app=self)
 
@@ -291,8 +291,8 @@ class WestApp:
         parser.add_argument('-h', '--help', action=WestHelpAction, nargs=0,
                             help='get help for west or a command')
 
-        parser.add_argument('-z', '--zephyr-base', default=None,
-                            help='''Override the Zephyr base directory. The
+        parser.add_argument('-b', '--base-dir', default=None,
+                            help='''Override the project base directory. The
                             default is the manifest project with path
                             "zephyr".''')
 
